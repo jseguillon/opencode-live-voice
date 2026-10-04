@@ -1,0 +1,19 @@
+{
+  "notification": false,
+  "sound": false,
+  "command": {
+    "enabled": true,
+    "path": "opencode-live-voice-event",
+    "args": ["{event}", "{sessionID}", "{agentName}", "{message}"],
+    "minDuration": 0
+  },
+  "events": {
+    "permission": { "sound": false, "notification": false, "command": true, "bell": false },
+    "complete": { "sound": false, "notification": false, "command": true, "bell": false },
+    "subagent_complete": { "sound": false, "notification": false, "command": true, "bell": false },
+    "error": { "sound": false, "notification": false, "command": true, "bell": false },
+    "question": { "sound": false, "notification": false, "command": true, "bell": false },
+    "user_cancelled": { "sound": false, "notification": false, "command": true, "bell": false },
+    "session_started": { "sound": false, "notification": false, "command": true, "bell": false }
+  }
+}

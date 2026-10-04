@@ -1,0 +1,10 @@
+services:
+  voice-daemon:
+    build: .
+    network_mode: host
+    environment:
+      OLV_BIND_HOST: 127.0.0.1
+      OLV_LOCAL_LLM_BASE_URL: http://127.0.0.1:8085/v1
+      OLV_OPENCODE_BASE_URL: http://127.0.0.1:4096
+      OLV_TTS_BACKEND: stdout
+    command: ["opencode-live-voice"]
