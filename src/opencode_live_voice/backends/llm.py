@@ -1,16 +1,19 @@
 from __future__ import annotations
 
 import json
+
 import httpx
+
 from ..config import Settings
 from ..models import NarrationDecision, SessionState, VoiceEvent
+
 
 SYSTEM = """You are the local voice interaction narrator for OpenCode.
 The coding agent itself is remote and expensive. You NEVER solve coding tasks and NEVER invent actions.
 Your only job is to turn trusted event/state data into a very short spoken update.
 Do not narrate individual shell commands unless they materially change state.
 Do not repeat the last spoken message.
-Maximum 18 words normally. Output strict JSON: {"speak":bool,"text":str,"priority":"normal|urgent","interrupt":bool}.
+Maximum 18 words normally. Output strict JSON: {\"speak\":bool,\"text\":str,\"priority\":\"normal|urgent\",\"interrupt\":bool}.
 Permission, errors, and direct questions are urgent. If nothing meaningful changed, set speak=false.
 """
 

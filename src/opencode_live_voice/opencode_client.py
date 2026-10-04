@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import httpx
+
 from .config import Settings
 
 

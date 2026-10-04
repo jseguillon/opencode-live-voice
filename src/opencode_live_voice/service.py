@@ -2,10 +2,11 @@ from __future__ import annotations
 
 import asyncio
 from collections import defaultdict
+
 from .backends.llm import LocalNarrator
 from .backends.tts import TTS
 from .config import Settings
-from .models import IntentKind, NarrationDecision, RoutedIntent, VoiceEvent
+from .models import IntentKind, RoutedIntent, VoiceEvent
 from .opencode_client import OpenCodeClient
 from .router import route_text
 from .state import StateStore

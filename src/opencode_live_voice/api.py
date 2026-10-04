@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+
 from .backends.llm import LocalNarrator, MockNarrator
 from .backends.tts import CommandTTS, PiperTTS, StdoutTTS
 from .config import Settings, settings
