@@ -7,7 +7,6 @@ import httpx
 from ..config import Settings
 from ..models import NarrationDecision, SessionState, VoiceEvent
 
-
 SYSTEM = """You are the local voice interaction narrator for OpenCode.
 The coding agent itself is remote and expensive. You NEVER solve coding tasks and NEVER invent actions.
 Your only job is to turn trusted event/state data into a very short spoken update.
